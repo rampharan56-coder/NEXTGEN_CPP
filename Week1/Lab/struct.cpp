@@ -15,8 +15,8 @@ void display(Book &b){
 int main() {
     Book b[3];
     b[0] = {"Tom and Jerry", "I don't know", 1990};
-    b[1] = {"Naruot", "I don't know", 1990};
-    b[2] = {"One Piece", "I don't knwo", 1990};
+    b[1] = {"Naruto", "I don't know", 1990};
+    b[2] = {"One Piece", "I don't know", 1990};
 
     display(b[0]);
     display(b[1]);
