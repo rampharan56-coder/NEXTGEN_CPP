@@ -64,7 +64,7 @@ public:
   {
     if (head == nullptr)
     {
-      std::cout << "List is emply" << std::endl;
+      std::cout << "List is empty" << std::endl;
       return;
     }
     Node *current = head;
@@ -108,10 +108,6 @@ public:
   {
     int count = 0;
     Node *current = head;
-    if (current == nullptr)
-    {
-      return 1;
-    }
     while (current != nullptr)
     {
       if (current->data == var)
@@ -165,7 +161,9 @@ public:
     std::cout << std::endl;
 
     // check odd number
+    current = head;
     bool hasOdd = false;
+    std::cout << "Odd value: ";
     while (current != nullptr)
     {
       if (current->data % 2 != 0)
@@ -180,6 +178,15 @@ public:
       std::cout << "None";
     }
     std::cout << std::endl;
+  }
+
+  ~SSL() {
+    Node *current = head;
+    while(current != nullptr) {
+      Node *next = current->next;
+      delete current;
+      current = next;
+    }
   }
 };
 
